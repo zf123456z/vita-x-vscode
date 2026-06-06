@@ -1,0 +1,79 @@
+{
+  "name": "vita-x",
+  "displayName": "Vita X — 自进化 AI 编程伙伴",
+  "description": "你的 AI 编程伙伴，越用越聪明。在 VS Code 里直接和 Vita X 对话，编写代码、分析问题、自动修复。",
+  "version": "0.1.0",
+  "publisher": "vita-x",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vita-x/vita-x-vscode"
+  },
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Chat",
+    "Programming Languages",
+    "Other"
+  ],
+  "keywords": [
+    "vita",
+    "ai",
+    "coding",
+    "assistant",
+    "self-evolving"
+  ],
+  "icon": "media/icon.png",
+  "activationEvents": [],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "vita-x.openChat",
+        "title": "Vita X: 打开聊天"
+      },
+      {
+        "command": "vita-x.askSelection",
+        "title": "Vita X: 解释选中代码"
+      },
+      {
+        "command": "vita-x.fixSelection",
+        "title": "Vita X: 修复选中代码"
+      }
+    ],
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "vita-x-sidebar",
+          "title": "Vita X",
+          "icon": "media/icon.svg"
+        }
+      ]
+    },
+    "views": {
+      "vita-x-sidebar": [
+        {
+          "type": "webview",
+          "id": "vita-x.chat",
+          "name": "与 Vita X 对话"
+        }
+      ]
+    },
+    "configuration": {
+      "title": "Vita X",
+      "properties": {
+        "vita-x.serverUrl": {
+          "type": "string",
+          "default": "http://localhost:8088",
+          "description": "Vita X 服务器地址（默认本地 8088 端口）"
+        },
+        "vita-x.apiKey": {
+          "type": "string",
+          "default": "",
+          "description": "VITA_API_KEY（如果服务器配置了密码认证）"
+        }
+      }
+    }
+  }
+}
