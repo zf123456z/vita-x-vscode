@@ -2,6 +2,9 @@
 
 你的自进化 AI 编程伙伴。越用越聪明。
 
+> 🧠 **理论成果**：Vita X 有自己完整的认知理论体系——超维计算、自由能原理、神经符号融合。
+> 详见 [docs/theory/](docs/theory/README.md)
+
 ## 安装
 
 ### 方式一：从 Open VSX Registry 安装（推荐）
